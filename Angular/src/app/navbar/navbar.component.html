@@ -1,0 +1,16 @@
+<div>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark" *ngIf="isLoggedIn$ | async as isLoggedIn">
+    <ul class="navbar-nav">
+      <li class="nav-item ">
+        <a routerLink="view-student" class="nav-link" class="btn btn-primary active" role="button">View Users</a>
+      </li>&nbsp;
+      <li class="nav-item">
+        <a routerLink="add-student" class="nav-link" class="btn btn-primary active" role="button">Add User</a>
+      </li>&nbsp;
+      <li class="nav-item">
+        <a routerLink="logout-student" *ngIf="isLoggedIn" (click)="logout()" class="navbar-nav ml-auto" class="btn btn-primary active"
+          role="button">LogOut</a>
+      </li>
+    </ul>
+  </nav>
+</div>

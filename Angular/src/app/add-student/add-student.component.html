@@ -1,0 +1,56 @@
+<h3>Create User</h3>
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4" >
+    <div [hidden]="submitted" style="width: 400px;">
+      <form [formGroup]="studentsaveform" #savestudent (ngSubmit)="saveStudent(saveStudent)">
+          <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control"  formControlName="student_name" data-toggle="tooltip" 
+                 data-placement="right" title="Enter User Name" >
+          </div>
+          <div class="form-group">
+              <label for="name">Email</label>
+              <input type="text" class="form-control" formControlName="student_email" 
+                data-toggle="tooltip" data-placement="right" title="Enter Student Email">
+          </div>
+  
+          <div class="form-group">
+              <label for="name">Phone Number</label>
+              <input type="text" class="form-control"  formControlName="student_phone_number" data-toggle="tooltip" 
+                 data-placement="right" title="Enter Phone Number" >
+          </div>
+          <div class="form-group">
+              <label for="name">Place</label>
+              <input type="text" class="form-control"  formControlName="student_place" data-toggle="tooltip" 
+                 data-placement="right" title="Enter Place" >
+          </div>
+            <div class="form-group">
+              <label for="name">Username</label>
+              <input type="text" class="form-control"  formControlName="username" data-toggle="tooltip" 
+                 data-placement="right" title="Enter username" >
+          </div>
+            <div class="form-group">
+              <label for="name">Password</label>
+              <input type="text" class="form-control"  formControlName="password" data-toggle="tooltip" 
+                 data-placement="right" title="Enter Password" >
+          </div>
+  
+          <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+  </div>
+  </div>
+  <div class="col-sm-4"></div>
+</div>
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+      <div [hidden]="!submitted">
+         <h4>User Added SuccessFully!</h4>
+         <button (click)="addStudentForm()" class='btn btn-primary'>Add More Student</button>
+      </div>      
+  </div>
+  <div class="col-sm-4"></div>
+</div>
+
+
